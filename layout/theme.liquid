@@ -24,6 +24,10 @@
   <link rel="preload" href="{{ 'theme.js' | asset_url }}" as="script">
   <link rel="preload" href="{{ 'lazysizes.js' | asset_url }}" as="script">
 
+  <!-- これで画像入れられる？ -->
+  <!-- {{ 'style.css' | | asset_img_url: 'medium' }} -->
+  {{ 'style.css' | asset_url | stylesheet_tag }}
+
   {%- if canonical_url != blank  -%}
     <link rel="canonical" href="{{ canonical_url }}">
   {%- endif -%}
